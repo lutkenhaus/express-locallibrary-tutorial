@@ -18,7 +18,9 @@ steps:
 - script: |
     npm install
     npm run build
+    echo "npm run build OK"
+    echo "node -v:"
     node -v
-    echo "everything OK!"
+    echo "Os scripts funcionaram corretamente!"
     npm run start
   displayName: 'npm install, build and start'
