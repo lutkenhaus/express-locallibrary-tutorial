@@ -1,0 +1,26 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- azure-pipelines-test
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.18'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+    echo "npm run build OK"
+    echo "node -v:"
+    node -v
+    echo "Os scripts funcionaram corretamente!"
+    npm run start
+  displayName: 'npm install, build and start'
