@@ -17,10 +17,10 @@ steps:
 
 - script: |
     npm install
-    npm build
-  displayName: 'npm install, build'
-
-- script: |
-    npm run devstart
-  
-  displayName: 'npm devstart'
+    npm run build
+    echo "npm run build OK"
+    echo "node -v:"
+    node -v
+    echo "Os scripts funcionaram corretamente!"
+    npm run start
+  displayName: 'npm install, build and start'
