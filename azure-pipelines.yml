@@ -18,8 +18,9 @@ steps:
 - script: |
     npm install
     npm build
-    npm start
-  displayName: 'npm install, build and start'
+  displayName: 'npm install, build'
 
 - script: |
     npm run devstart
+  
+  displayName: 'npm devstart'
