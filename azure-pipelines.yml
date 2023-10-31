@@ -17,6 +17,6 @@ steps:
 
 - script: |
     npm install
-    npm build
-    npm serverstart
-  displayName: 'npm install, build and serverstart'
+    npm run build
+    npm run start
+  displayName: 'npm install, build and start'
