@@ -7,7 +7,7 @@ trigger:
 - azure-pipelines-test
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
 
 steps:
 - task: NodeTool@0
@@ -16,11 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install &&
-    npm build &&
+    npm install
+    npm build
     npm start
   displayName: 'npm install, build and start'
-
-- script: |
-    npm start
-  displayName: 'npm start'
