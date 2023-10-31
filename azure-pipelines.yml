@@ -20,3 +20,6 @@ steps:
     npm build
     npm start
   displayName: 'npm install, build and start'
+
+- script: |
+    npm run devstart
