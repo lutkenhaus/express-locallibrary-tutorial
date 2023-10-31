@@ -17,6 +17,8 @@ steps:
 
 - script: |
     npm install
+    npm audit fix
     npm run build
+    clear
     npm run start
   displayName: 'npm install, build and start'
